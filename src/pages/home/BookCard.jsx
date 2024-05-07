@@ -5,33 +5,21 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import PocketBase from "pocketbase";
 
 const BookCard = ({ title, img, id }) => {
   const navigate = useNavigate();
-  const [loading, setLoading] = React.useState(true);
-  const [book, setBook] = React.useState();
-  const pb = new PocketBase("https://book-shop.fly.dev");
 
   const navigateToBook = () => {
-    navigate(`/product/:${id}`);
+    navigate(`/product/${id}`);
   };
 
-  const getBook = async () => {
-    const record = await pb.collection("Books").getOne(id, {
-      //   expand: "relField1,relField2.subRelField",
-    });
-    console.log(record);
-    setBook(record);
-  };
-
-  React.useEffect(() => {
-    getBook();
-  }, []);
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card elevation={0} sx={{ maxWidth: 345, borderRadius: "15px" }}>
       <CardActionArea onClick={navigateToBook}>
         <CardMedia
+          sx={{
+            objectFit: "contain",
+          }}
           component="img"
           height="250"
           image={img}
