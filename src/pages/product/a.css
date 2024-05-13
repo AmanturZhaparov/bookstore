@@ -1,0 +1,9 @@
+.as{
+    margin: 0;
+    outline: #7A8FFE solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+.price{
+    padding-left: 0;
+}

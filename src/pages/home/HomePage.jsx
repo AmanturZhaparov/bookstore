@@ -62,9 +62,8 @@ const HomePage = () => {
     getBooks();
   }, []);
   return (
-    <Container>
+    <Container sx={{paddingTop: 10}}>
       {console.log(books)}
-      <h1>Books</h1>
       <Snackbar
         open={open}
         autoHideDuration={3000}
@@ -79,7 +78,8 @@ const HomePage = () => {
         ) : (
           books?.items?.map((book) => (
             <Grid key={book.id} item xs={6} sm={4} md={4} lg={3}>
-              <BookCard
+              <BookCard 
+                
                 id={book.id}
                 title={book.title}
                 img={`https://book-shop.fly.dev/api/files/Books/${book.id}/${book.img}`}

@@ -12,21 +12,24 @@ const BookCard = ({ title, img, id }) => {
   const navigateToBook = () => {
     navigate(`/product/${id}`);
   };
-
+  
   return (
-    <Card elevation={0} sx={{ maxWidth: 345, borderRadius: "15px" }}>
+    <Card elevation={0} sx={{ maxWidth: 345, borderRadius: "15px" , backgroundColor: "#ffff", paddingTop: 5}}>
       <CardActionArea onClick={navigateToBook}>
         <CardMedia
           sx={{
-            objectFit: "contain",
+            objectFit: "cover",
+            borderRadius:"12px"
           }}
           component="img"
           height="250"
           image={img}
           alt="green iguana"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent style={{
+          padding: 0
+        }}>
+          <Typography sx={{color: "black", fontSize: 20}} gutterBottom variant="h5" component="div">
             {title}
           </Typography>
         </CardContent>
