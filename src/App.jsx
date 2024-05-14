@@ -7,7 +7,6 @@ import HomePage from "./pages/home/HomePage";
 import DetailedPage from "./pages/product/DetailedPage";
 import DenseAppBar from "./bookbar";
 import SearchAppBar from "./appbar"
-import CartPage from "./pages/cart/CartPage";
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<DetailedPage />} />
-        <Route path="/cart" element={<CartPage/>}/>
 
       </Routes>
     </>

@@ -70,17 +70,7 @@ export default function SearchAppBar() {
             <Home sx={{color: "#7A8FFE"}} />
           </IconButton>
           </Link>
-          <Link to={"/cart"}>
-         <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <ShoppingCartIcon sx={{color: "#7A8FFE"}} />
-          </IconButton>
-          </Link>
+          
           
           
           <Search sx={{backgroundColor: "white", borderRadius: 50, borderColor: "gray"}}>

@@ -4,8 +4,9 @@ import React from "react";
 import "./k2d.css"
 import "./a.css"
 import { Flex, background } from "@chakra-ui/react";
-import ContainedButtons from "./button.jsx";
-import SimpleSnackbar from "./button.jsx";
+
+
+
 const DetailedPage = () => {
   const productId = useParams();
   const [loading, setLoading] = React.useState(true);
@@ -48,7 +49,6 @@ const DetailedPage = () => {
         <h1 style={{fontSize:30,color: "#7A8FFE"}}>Price</h1>
         <h1  style={{fontSize:30}}>:{book?.price}$</h1>
         </div>
-        <SimpleSnackbar/>
         <div style={{display: "flex", margin: 0}}>
         <h1 style={{fontSize:20,color: "#7A8FFE"}}>Author</h1>
         <h1  style={{fontSize:20}}>:{book?.Author}</h1>
