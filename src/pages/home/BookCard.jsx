@@ -22,7 +22,7 @@ const BookCard = ({ title, img, id }) => {
             borderRadius:"12px"
           }}
           component="img"
-          height="250"
+          height="270"
           image={img}
           alt="green iguana"
         />

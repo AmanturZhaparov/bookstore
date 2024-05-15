@@ -26,7 +26,7 @@ const DetailedPage = () => {
     getBook();
   }, []);
   return (
-    <div>
+    <div style={{padding:"30px 30px"}}>
       <img
         style={{
           minWidth: 330,
@@ -46,30 +46,29 @@ const DetailedPage = () => {
         }}
       >
         <h1 style={{ fontSize: 40, margin: 0 }}>{book?.title}</h1>
-        {book?.expand?.Book_Shop?.map((shop) => (
-          <p>
-            {shop.title} {shop.address}
-          </p>
-        ))}
+        
 
         <div style={{ display: "flex", margin: 0, minWidth: 330 }}>
           <h1 style={{ fontSize: 30, color: "#7A8FFE" }}>Price</h1>
           <h1 style={{ fontSize: 30 }}>:{book?.price}$</h1>
         </div>
-<<<<<<< HEAD
-        <div style={{display: "flex", margin: 0}}>
-        <h1 style={{fontSize:20,color: "#7A8FFE"}}>Author</h1>
-        <h1  style={{fontSize:20}}>:{book?.Author}</h1>
-=======
-        <SimpleSnackbar />
         <div style={{ display: "flex", margin: 0 }}>
           <h1 style={{ fontSize: 20, color: "#7A8FFE" }}>Author</h1>
           <h1 style={{ fontSize: 20 }}>:{book?.Author}</h1>
->>>>>>> 627683a28d47043e25e95157fdf8f8b29f323c76
         </div>
-        <h1 style={{ fontSize: 15, color: "black" }}>
-          Where you can buy it:{book?.Book_Shop}
-        </h1>
+        <div style={{fontSize: 15 , display: "flex"}}>
+        <h1 style={{fontSize: 15 }}>
+          Where you can buy it:
+          </h1>
+          <div style={{display:'flex', flexDirection:"row"}}>
+          {book?.expand?.Book_Shop?.map((shop) => (
+          <h1 style={{fontSize: 15 }}>
+            {shop.title}<br/>
+          </h1>
+        ))}
+          </div>
+          </div>
+
 
         <div
           className="as"
