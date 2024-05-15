@@ -56,26 +56,16 @@ const DetailedPage = () => {
           <h1 style={{ fontSize: 20, color: "#7A8FFE" }}>Author</h1>
           <h1 style={{ fontSize: 20 }}>:{book?.Author}</h1>
         </div>
-        <div style={{fontSize: 15 , display: "flex"}}>
-        <h1 style={{fontSize: 15 }}>
-          Where you can buy it:
-          </h1>
-          <div style={{display:'flex', flexDirection:"row"}}>
-          {book?.expand?.Book_Shop?.map((shop) => (
-          <h1 style={{fontSize: 15 }}>
-            {shop.title}<br/>
-          </h1>
-        ))}
-          </div>
+        
           </div>
 
 
-        <div
+        <div style={{color: "black"}}
           className="as"
           dangerouslySetInnerHTML={{ __html: book?.definition }}
         ></div>
       </div>
-    </div>
+    
   );
 };
 
